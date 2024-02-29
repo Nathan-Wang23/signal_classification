@@ -1,0 +1,33 @@
+Data Pipeline Pseudocode:
+
+Start with fc32 file of binary data
+
+Grababout 50 frames worth of data at a time
+
+* if bluetooth remove white space
+
+Reshape the data into the appropriate 64x256 shape
+
+Fourier transform columns to get 256x256 frame
+
+Preprocess to normalize data
+
+Save frames as numpy array (concatenate)
+
+* For high SNR data add noise by combining processed frames
+
+Take concatenated list and convert to jpeg
+
+Label images with bounding boxes
+
+Separate into test and training sets
+
+Train NN
+
+
+
+Creating Noise Image Directory
+
+- Go through each game on idc-nas
+- Run preprocess on whichever fc32 file from each game is best (maybe need to convert sc16 to fc32?)
+- Use jupyter notebook to store images in a folder called noise-images in ML directory
